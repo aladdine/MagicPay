@@ -44,7 +44,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#howto">How it works?</a></li>
-             <li><a href="#pricing">Pricing</a></li>
+             <li><a href="#pricing">Pricing</a></li>           
+             <li><a href="#">Dashboard</a></li>
           </ul>  
          
         </div><!--/.navbar-collapse -->
@@ -57,7 +58,14 @@
 
         <h1><span class="slogan">Magic Pay</span></h1>
         <p class="slogan">Location based payments powered by iBeacon Technology</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Start Here &raquo;</a></p>
+        <p> 
+             <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Phone number">
+                    </div>
+                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"> Create Event </button>
+              </form>
+        </p>
         <div class="appstore"><img src="img/appstore.png"></div>
       </div>
     </div>
@@ -133,7 +141,33 @@
       </div>
 
     </div>    
-   
+      <hr class="built-with-hr">
+
+
+      <div class="container events-div">
+
+         <h3 class="events">One-click setup for a seamless experience</h3>
+      
+
+        <div class="row">
+        <div class="col-md-3 col-md-push-2">
+         <div id="app-screen-notification"></div>
+          
+         
+        </div>
+        <div class="col-md-3 col-md-push-2">
+          <div id="app-screen-pay"></div> 
+        
+       </div>
+        <div class="col-md-3 col-md-push-2">
+           <div id="app-screen-ticket"></div> 
+         
+        </div>
+        
+      </div>
+
+    </div> 
+
 
       <hr class="pricing-hr">
       <div class="container">
@@ -183,7 +217,7 @@
      
 
 
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </div> <!-- /container -->        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -199,5 +233,44 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+       
+        
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Awesome! You're halfway there</h4>
+      </div>
+      <div class="modal-body" id="success-message">
+           <form>
+                    <div class="form-group">
+                      <p>We just sent you a text. Please insert verification code below.</p>
+                      <input type="text" class="form-control" placeholder="Conformation code">
+                      <input type="text" class="form-control" placeholder="Event/Venue name"> 
+                      <input type="text" class="form-control" placeholder="id of beacon">                      
+                    </div>
+                    
+           </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="create-event">Create Event</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <script type="text/javascript">
+                    $("#create-event").click(function(){
+
+                      $("#success-message").html("<h2>Congratulations. Your event has been created successfully.</h2>")
+
+                    });
+        </script>
+    
     </body>
 </html>

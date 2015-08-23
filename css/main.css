@@ -57,6 +57,33 @@
 	background-repeat: no-repeat;
 }
 
+#app-screen-notification {
+
+	background-image: url('../img/app-screen-notification.png');
+	height: 400px;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#app-screen-ticket {
+
+	background-image: url('../img/app-screen-ticket.png');
+	height: 400px;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#app-screen-pay {
+
+	background-image: url('../img/app-screen-pay.png');
+	height: 400px;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .simplify {
 	margin: auto;
 	margin-top: 40px;
@@ -98,7 +125,7 @@
 }
 
 .appstore {
-	margin-top: 80px;
+	margin-top: 100px;
 }
 
 .pricing {
@@ -111,6 +138,8 @@
 
 .events-div {
 	margin-bottom: 50px;
+	text-align: center;
+	margin: auto;
 }
 
 hr.how-it-works-hr-before {
@@ -160,6 +189,7 @@ hr.footer-hr {
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
 
 
 
