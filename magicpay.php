@@ -6,8 +6,8 @@
         Simplify::$privateKey = 'cl5KEXyHM7tgQDBP6XiMjaVEgAAPsHxEnnGlNF1xdxt5YFFQL0ODSXAOkNtXTToq';
          
         $payment = Simplify_Payment::createPayment(array(
-                'amount' => $_REQUEST[amount],
-                'token' => $_REQUEST[token],
+                'amount' => $_REQUEST['amount'],
+                'token' => $_REQUEST['token'],
                 'description' => 'payment description',
                 'reference' => '7a6ef6be31',
                 'currency' => 'USD'
