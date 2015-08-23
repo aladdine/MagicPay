@@ -10,8 +10,6 @@
 		82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */; };
 		C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A01B8966F500762A27 /* AppDelegate.swift */; };
 		C28A19A31B8966F500762A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A21B8966F500762A27 /* ViewController.swift */; };
-		C28A19A61B8966F500762A27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A41B8966F500762A27 /* Main.storyboard */; };
-		C28A19A81B8966F500762A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A71B8966F500762A27 /* Images.xcassets */; };
 		C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A91B8966F500762A27 /* LaunchScreen.xib */; };
 		C28A19B71B8966F500762A27 /* magicPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19B61B8966F500762A27 /* magicPayTests.swift */; };
 		C28A19C51B89672900762A27 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C11B89672900762A27 /* Fabric.framework */; };
@@ -21,6 +19,32 @@
 		C28A19CA1B896BC500762A27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C91B896BC500762A27 /* CoreLocation.framework */; };
 		C28A19CD1B898A8100762A27 /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C28A19CB1B898A8100762A27 /* Simplify.bundle */; };
 		C28A19CE1B898A8100762A27 /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19CC1B898A8100762A27 /* Simplify.framework */; };
+		C28A19D51B89940400762A27 /* IBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19D41B89940400762A27 /* IBeacon.swift */; };
+		C28A19D91B89B6FC00762A27 /* saticContVenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19D61B89B6FC00762A27 /* saticContVenuViewController.swift */; };
+		C28A19DA1B89B6FC00762A27 /* venuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19D71B89B6FC00762A27 /* venuTableViewCell.swift */; };
+		C28A19DB1B89B6FC00762A27 /* venuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19D81B89B6FC00762A27 /* venuViewController.swift */; };
+		C28A19DD1B89B72100762A27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28A19DC1B89B72100762A27 /* Main.storyboard */; };
+		C28A19DF1B89B77800762A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A19DE1B89B77800762A27 /* Images.xcassets */; };
+		C28A19E11B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C28A19E01B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg */; };
+		C28A19E31B89B85800762A27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19E21B89B85800762A27 /* LoginViewController.swift */; };
+		C28A19E91B89B95100762A27 /* Hallo sans black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C28A19E51B89B95100762A27 /* Hallo sans black.otf */; };
+		C28A19EA1B89B95100762A27 /* Hallo sans light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C28A19E61B89B95100762A27 /* Hallo sans light.otf */; };
+		C28A19EB1B89B95100762A27 /* Hallo sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = C28A19E71B89B95100762A27 /* Hallo sans.otf */; };
+		C28A19EC1B89B95100762A27 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = C28A19E81B89B95100762A27 /* readme.txt */; };
+		C28A19EE1B89BF4900762A27 /* Terillion-App-Icon_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A19ED1B89BF4900762A27 /* Terillion-App-Icon_copy.png */; };
+		C28A19F01B89C00E00762A27 /* blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C28A19EF1B89C00E00762A27 /* blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg */; };
+		C28A19F21B89C1B100762A27 /* confide-iphone-app-icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A19F11B89C1B100762A27 /* confide-iphone-app-icon-2.png */; };
+		C28A19F41B89C28400762A27 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19F31B89C28400762A27 /* MeViewController.swift */; };
+		C28A19F61B89C2DB00762A27 /* profile_round-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A19F51B89C2DB00762A27 /* profile_round-3.png */; };
+		C28A19F81B89C52C00762A27 /* 320px-MasterCard_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A19F71B89C52C00762A27 /* 320px-MasterCard_logo.png */; };
+		C28A19FD1B89D12000762A27 /* blahTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19F91B89D12000762A27 /* blahTableViewCell.swift */; };
+		C28A19FE1B89D12000762A27 /* blahUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19FA1B89D12000762A27 /* blahUIViewController.swift */; };
+		C28A19FF1B89D12000762A27 /* wooUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19FB1B89D12000762A27 /* wooUITableViewCell.swift */; };
+		C28A1A001B89D12000762A27 /* wooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19FC1B89D12000762A27 /* wooViewController.swift */; };
+		C28A1A021B89D29600762A27 /* Logo_Tomorrowland.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A1A011B89D29600762A27 /* Logo_Tomorrowland.png */; };
+		C28A1A041B89D2F500762A27 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C28A1A031B89D2F500762A27 /* logo.png */; };
+		C28A1A061B89D36300762A27 /* masters-of-code1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C28A1A051B89D36300762A27 /* masters-of-code1.jpg */; };
+		C28A1A081B89DE1200762A27 /* 720111570_14037573429683297038.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C28A1A071B89DE1200762A27 /* 720111570_14037573429683297038.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +64,6 @@
 		C28A199F1B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A19A01B8966F500762A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28A19A21B8966F500762A27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C28A19A51B8966F500762A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C28A19A71B8966F500762A27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C28A19AA1B8966F500762A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C28A19B01B8966F500762A27 /* magicPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magicPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A19B51B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +76,32 @@
 		C28A19CB1B898A8100762A27 /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
 		C28A19CC1B898A8100762A27 /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
 		C28A19D01B898AFC00762A27 /* magicPay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "magicPay-Bridging-Header.h"; sourceTree = "<group>"; };
+		C28A19D41B89940400762A27 /* IBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeacon.swift; sourceTree = "<group>"; };
+		C28A19D61B89B6FC00762A27 /* saticContVenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saticContVenuViewController.swift; sourceTree = "<group>"; };
+		C28A19D71B89B6FC00762A27 /* venuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = venuTableViewCell.swift; sourceTree = "<group>"; };
+		C28A19D81B89B6FC00762A27 /* venuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = venuViewController.swift; sourceTree = "<group>"; };
+		C28A19DC1B89B72100762A27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C28A19DE1B89B77800762A27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C28A19E01B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg"; sourceTree = "<group>"; };
+		C28A19E21B89B85800762A27 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C28A19E51B89B95100762A27 /* Hallo sans black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans black.otf"; sourceTree = "<group>"; };
+		C28A19E61B89B95100762A27 /* Hallo sans light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans light.otf"; sourceTree = "<group>"; };
+		C28A19E71B89B95100762A27 /* Hallo sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans.otf"; sourceTree = "<group>"; };
+		C28A19E81B89B95100762A27 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		C28A19ED1B89BF4900762A27 /* Terillion-App-Icon_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Terillion-App-Icon_copy.png"; sourceTree = "<group>"; };
+		C28A19EF1B89C00E00762A27 /* blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg"; sourceTree = "<group>"; };
+		C28A19F11B89C1B100762A27 /* confide-iphone-app-icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "confide-iphone-app-icon-2.png"; sourceTree = "<group>"; };
+		C28A19F31B89C28400762A27 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		C28A19F51B89C2DB00762A27 /* profile_round-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_round-3.png"; sourceTree = "<group>"; };
+		C28A19F71B89C52C00762A27 /* 320px-MasterCard_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "320px-MasterCard_logo.png"; sourceTree = "<group>"; };
+		C28A19F91B89D12000762A27 /* blahTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blahTableViewCell.swift; sourceTree = "<group>"; };
+		C28A19FA1B89D12000762A27 /* blahUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blahUIViewController.swift; sourceTree = "<group>"; };
+		C28A19FB1B89D12000762A27 /* wooUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wooUITableViewCell.swift; sourceTree = "<group>"; };
+		C28A19FC1B89D12000762A27 /* wooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wooViewController.swift; sourceTree = "<group>"; };
+		C28A1A011B89D29600762A27 /* Logo_Tomorrowland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Tomorrowland.png; sourceTree = "<group>"; };
+		C28A1A031B89D2F500762A27 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		C28A1A051B89D36300762A27 /* masters-of-code1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "masters-of-code1.jpg"; sourceTree = "<group>"; };
+		C28A1A071B89DE1200762A27 /* 720111570_14037573429683297038.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 720111570_14037573429683297038.jpg; sourceTree = "<group>"; };
 		F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +140,8 @@
 		C28A19921B8966F500762A27 = {
 			isa = PBXGroup;
 			children = (
+				C28A19E41B89B95100762A27 /* Hallo-Sans */,
+				C28A19D41B89940400762A27 /* IBeacon.swift */,
 				C28A19CB1B898A8100762A27 /* Simplify.bundle */,
 				C28A19CC1B898A8100762A27 /* Simplify.framework */,
 				C28A19C91B896BC500762A27 /* CoreLocation.framework */,
@@ -120,11 +170,29 @@
 		C28A199D1B8966F500762A27 /* magicPay */ = {
 			isa = PBXGroup;
 			children = (
+				C28A1A051B89D36300762A27 /* masters-of-code1.jpg */,
+				C28A1A031B89D2F500762A27 /* logo.png */,
+				C28A1A011B89D29600762A27 /* Logo_Tomorrowland.png */,
+				C28A19D61B89B6FC00762A27 /* saticContVenuViewController.swift */,
+				C28A19D71B89B6FC00762A27 /* venuTableViewCell.swift */,
+				C28A19D81B89B6FC00762A27 /* venuViewController.swift */,
+				C28A19F91B89D12000762A27 /* blahTableViewCell.swift */,
+				C28A19FA1B89D12000762A27 /* blahUIViewController.swift */,
+				C28A19FB1B89D12000762A27 /* wooUITableViewCell.swift */,
+				C28A19FC1B89D12000762A27 /* wooViewController.swift */,
 				C28A19A01B8966F500762A27 /* AppDelegate.swift */,
 				C28A19A21B8966F500762A27 /* ViewController.swift */,
-				C28A19A41B8966F500762A27 /* Main.storyboard */,
-				C28A19A71B8966F500762A27 /* Images.xcassets */,
+				C28A19DE1B89B77800762A27 /* Images.xcassets */,
+				C28A19DC1B89B72100762A27 /* Main.storyboard */,
+				C28A19F31B89C28400762A27 /* MeViewController.swift */,
+				C28A19E21B89B85800762A27 /* LoginViewController.swift */,
+				C28A19F71B89C52C00762A27 /* 320px-MasterCard_logo.png */,
+				C28A19F11B89C1B100762A27 /* confide-iphone-app-icon-2.png */,
+				C28A19ED1B89BF4900762A27 /* Terillion-App-Icon_copy.png */,
+				C28A19F51B89C2DB00762A27 /* profile_round-3.png */,
 				C28A19A91B8966F500762A27 /* LaunchScreen.xib */,
+				C28A19E01B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg */,
+				C28A19EF1B89C00E00762A27 /* blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg */,
 				C28A199E1B8966F500762A27 /* Supporting Files */,
 			);
 			path = magicPay;
@@ -153,6 +221,18 @@
 				C28A19B51B8966F500762A27 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C28A19E41B89B95100762A27 /* Hallo-Sans */ = {
+			isa = PBXGroup;
+			children = (
+				C28A19E51B89B95100762A27 /* Hallo sans black.otf */,
+				C28A19E61B89B95100762A27 /* Hallo sans light.otf */,
+				C28A19E71B89B95100762A27 /* Hallo sans.otf */,
+				C28A1A071B89DE1200762A27 /* 720111570_14037573429683297038.jpg */,
+				C28A19E81B89B95100762A27 /* readme.txt */,
+			);
+			path = "Hallo-Sans";
 			sourceTree = "<group>";
 		};
 		D0CB42A0E730D080F97F7B3C /* Pods */ = {
@@ -254,11 +334,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28A1A081B89DE1200762A27 /* 720111570_14037573429683297038.jpg in Resources */,
+				C28A1A021B89D29600762A27 /* Logo_Tomorrowland.png in Resources */,
+				C28A19EC1B89B95100762A27 /* readme.txt in Resources */,
+				C28A19F81B89C52C00762A27 /* 320px-MasterCard_logo.png in Resources */,
+				C28A1A061B89D36300762A27 /* masters-of-code1.jpg in Resources */,
+				C28A19EA1B89B95100762A27 /* Hallo sans light.otf in Resources */,
+				C28A19F61B89C2DB00762A27 /* profile_round-3.png in Resources */,
+				C28A1A041B89D2F500762A27 /* logo.png in Resources */,
+				C28A19F21B89C1B100762A27 /* confide-iphone-app-icon-2.png in Resources */,
 				C28A19C71B89672900762A27 /* DigitsKitResources.bundle in Resources */,
-				C28A19A61B8966F500762A27 /* Main.storyboard in Resources */,
 				C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */,
-				C28A19A81B8966F500762A27 /* Images.xcassets in Resources */,
+				C28A19EE1B89BF4900762A27 /* Terillion-App-Icon_copy.png in Resources */,
+				C28A19DD1B89B72100762A27 /* Main.storyboard in Resources */,
+				C28A19E91B89B95100762A27 /* Hallo sans black.otf in Resources */,
+				C28A19E11B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg in Resources */,
+				C28A19DF1B89B77800762A27 /* Images.xcassets in Resources */,
 				C28A19CD1B898A8100762A27 /* Simplify.bundle in Resources */,
+				C28A19F01B89C00E00762A27 /* blurred-vision-iphone5wallpapersus_94701a116a4d9e9d39afa1f4cef46f13_raw.jpg in Resources */,
+				C28A19EB1B89B95100762A27 /* Hallo sans.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,8 +416,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28A19E31B89B85800762A27 /* LoginViewController.swift in Sources */,
+				C28A19FE1B89D12000762A27 /* blahUIViewController.swift in Sources */,
+				C28A19FD1B89D12000762A27 /* blahTableViewCell.swift in Sources */,
 				C28A19A31B8966F500762A27 /* ViewController.swift in Sources */,
+				C28A19F41B89C28400762A27 /* MeViewController.swift in Sources */,
 				C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */,
+				C28A1A001B89D12000762A27 /* wooViewController.swift in Sources */,
+				C28A19DB1B89B6FC00762A27 /* venuViewController.swift in Sources */,
+				C28A19D51B89940400762A27 /* IBeacon.swift in Sources */,
+				C28A19D91B89B6FC00762A27 /* saticContVenuViewController.swift in Sources */,
+				C28A19DA1B89B6FC00762A27 /* venuTableViewCell.swift in Sources */,
+				C28A19FF1B89D12000762A27 /* wooUITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,14 +450,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C28A19A41B8966F500762A27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C28A19A51B8966F500762A27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C28A19A91B8966F500762A27 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
