@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */; };
 		C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A01B8966F500762A27 /* AppDelegate.swift */; };
 		C28A19A31B8966F500762A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A21B8966F500762A27 /* ViewController.swift */; };
 		C28A19A61B8966F500762A27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A41B8966F500762A27 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magicPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.debug.xcconfig"; sourceTree = "<group>"; };
 		C28A199B1B8966F500762A27 /* magicPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magicPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A199F1B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A19A01B8966F500762A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		C28A19C31B89672900762A27 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
 		C28A19C41B89672900762A27 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		C28A19C91B896BC500762A27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 				C28A19C51B89672900762A27 /* Fabric.framework in Frameworks */,
 				C28A19C81B89672900762A27 /* TwitterCore.framework in Frameworks */,
 				C28A19C61B89672900762A27 /* DigitsKit.framework in Frameworks */,
+				82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9806E120A7A495A23983BEA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C28A19921B8966F500762A27 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,8 @@
 				C28A199D1B8966F500762A27 /* magicPay */,
 				C28A19B31B8966F500762A27 /* magicPayTests */,
 				C28A199C1B8966F500762A27 /* Products */,
+				D0CB42A0E730D080F97F7B3C /* Pods */,
+				9806E120A7A495A23983BEA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +146,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0CB42A0E730D080F97F7B3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */,
+				F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C28A19BA1B8966F500762A27 /* Build configuration list for PBXNativeTarget "magicPay" */;
 			buildPhases = (
+				8EAC2E615BD38A24893F2931 /* Check Pods Manifest.lock */,
 				C28A19971B8966F500762A27 /* Sources */,
 				C28A19981B8966F500762A27 /* Frameworks */,
 				C28A19991B8966F500762A27 /* Resources */,
 				C28A19C01B89671400762A27 /* ShellScript */,
+				93273907F7D6A6D65265D819 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +262,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8EAC2E615BD38A24893F2931 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93273907F7D6A6D65265D819 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magicPay/Pods-magicPay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C28A19C01B89671400762A27 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +438,7 @@
 		};
 		C28A19BB1B8966F500762A27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -398,6 +455,7 @@
 		};
 		C28A19BC1B8966F500762A27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

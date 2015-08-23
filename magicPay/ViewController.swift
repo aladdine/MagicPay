@@ -9,6 +9,7 @@
 import UIKit
 import DigitsKit
 import CoreLocation
+import Firebase
 class ViewController: UIViewController,CLLocationManagerDelegate {
   
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
@@ -42,6 +43,20 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
       // play with Digits session
       println("phone number: \(session.phoneNumber)")
       println("User id: \(session.userID)")
+      
+      //Saving on NSUserDefaults
+      NSUserDefaults.standardUserDefaults().setValue(session.phoneNumber, forKey: "phoneNumber")
+      NSUserDefaults.standardUserDefaults().setValue(session.userID, forKey: "userID")
+      NSUserDefaults.standardUserDefaults().synchronize()
+      
+//      var ref = Firebase(url: "https://magicpay.firebaseio.com")
+//      var alanisawesome = ["full_name": "Alan Turing", "date_of_birth": "June 23, 1912"]
+//      var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
+//      
+//      var usersRef = ref.childByAppendingPath("users")
+//      
+//      var users = ["alanisawesome": alanisawesome, "gracehop": gracehop]
+//      usersRef.setValue(users)
       
     })
     authenticateButton.center = self.view.center
@@ -91,8 +106,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
   
   func beaconDidApprox(#beacon:CLBeacon, forRegion region: CLRegion)
   {
-    println(region.identifier)
-    let session = DGTSession.userID
+    println("beaconID: \(region.identifier)")
+    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
+    {
+      println("userID: \(userID)")
+    }
   }
   func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
     println("Exited Beacon")
