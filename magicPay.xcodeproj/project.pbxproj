@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */; };
 		C26A26B41B89FDE300C6F3A9 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A26B31B89FDE300C6F3A9 /* EventDetailViewController.swift */; };
+		C26A26B71B8A116100C6F3A9 /* nearbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A26B51B8A116100C6F3A9 /* nearbyTableViewCell.swift */; };
+		C26A26B81B8A116100C6F3A9 /* nearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A26B61B8A116100C6F3A9 /* nearbyViewController.swift */; };
+		C26A26BA1B8A17F200C6F3A9 /* 720313864_13472305211789227906.png in Resources */ = {isa = PBXBuildFile; fileRef = C26A26B91B8A17F200C6F3A9 /* 720313864_13472305211789227906.png */; };
+		C26A26BC1B8A2F5100C6F3A9 /* 720311173_15544444864264226309.png in Resources */ = {isa = PBXBuildFile; fileRef = C26A26BB1B8A2F5100C6F3A9 /* 720311173_15544444864264226309.png */; };
 		C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A01B8966F500762A27 /* AppDelegate.swift */; };
 		C28A19A31B8966F500762A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A21B8966F500762A27 /* ViewController.swift */; };
 		C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A91B8966F500762A27 /* LaunchScreen.xib */; };
@@ -62,6 +66,10 @@
 		5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magicPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.debug.xcconfig"; sourceTree = "<group>"; };
 		C26A26B31B89FDE300C6F3A9 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		C26A26B51B8A116100C6F3A9 /* nearbyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyTableViewCell.swift; sourceTree = "<group>"; };
+		C26A26B61B8A116100C6F3A9 /* nearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyViewController.swift; sourceTree = "<group>"; };
+		C26A26B91B8A17F200C6F3A9 /* 720313864_13472305211789227906.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 720313864_13472305211789227906.png; sourceTree = "<group>"; };
+		C26A26BB1B8A2F5100C6F3A9 /* 720311173_15544444864264226309.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 720311173_15544444864264226309.png; sourceTree = "<group>"; };
 		C28A199B1B8966F500762A27 /* magicPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magicPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A199F1B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A19A01B8966F500762A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 		C28A19921B8966F500762A27 = {
 			isa = PBXGroup;
 			children = (
+				C26A26BB1B8A2F5100C6F3A9 /* 720311173_15544444864264226309.png */,
+				C26A26B91B8A17F200C6F3A9 /* 720313864_13472305211789227906.png */,
 				C28A19E41B89B95100762A27 /* Hallo-Sans */,
 				C28A19D41B89940400762A27 /* IBeacon.swift */,
 				C28A19CB1B898A8100762A27 /* Simplify.bundle */,
@@ -172,6 +182,8 @@
 		C28A199D1B8966F500762A27 /* magicPay */ = {
 			isa = PBXGroup;
 			children = (
+				C26A26B51B8A116100C6F3A9 /* nearbyTableViewCell.swift */,
+				C26A26B61B8A116100C6F3A9 /* nearbyViewController.swift */,
 				C28A1A051B89D36300762A27 /* masters-of-code1.jpg */,
 				C28A1A031B89D2F500762A27 /* logo.png */,
 				C28A1A011B89D29600762A27 /* Logo_Tomorrowland.png */,
@@ -346,11 +358,13 @@
 				C28A19F61B89C2DB00762A27 /* profile_round-3.png in Resources */,
 				C28A1A041B89D2F500762A27 /* logo.png in Resources */,
 				C28A19F21B89C1B100762A27 /* confide-iphone-app-icon-2.png in Resources */,
+				C26A26BA1B8A17F200C6F3A9 /* 720313864_13472305211789227906.png in Resources */,
 				C28A19C71B89672900762A27 /* DigitsKitResources.bundle in Resources */,
 				C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */,
 				C28A19EE1B89BF4900762A27 /* Terillion-App-Icon_copy.png in Resources */,
 				C28A19DD1B89B72100762A27 /* Main.storyboard in Resources */,
 				C28A19E91B89B95100762A27 /* Hallo sans black.otf in Resources */,
+				C26A26BC1B8A2F5100C6F3A9 /* 720311173_15544444864264226309.png in Resources */,
 				C28A19E11B89B84D00762A27 /* minimalistic gaussian blur 2560x1600 wallpaper_www.wall321.com_3.jpg in Resources */,
 				C28A19DF1B89B77800762A27 /* Images.xcassets in Resources */,
 				C28A19CD1B898A8100762A27 /* Simplify.bundle in Resources */,
@@ -423,6 +437,7 @@
 				C28A19FE1B89D12000762A27 /* blahUIViewController.swift in Sources */,
 				C28A19FD1B89D12000762A27 /* blahTableViewCell.swift in Sources */,
 				C26A26B41B89FDE300C6F3A9 /* EventDetailViewController.swift in Sources */,
+				C26A26B71B8A116100C6F3A9 /* nearbyTableViewCell.swift in Sources */,
 				C28A19A31B8966F500762A27 /* ViewController.swift in Sources */,
 				C28A19F41B89C28400762A27 /* MeViewController.swift in Sources */,
 				C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */,
@@ -430,6 +445,7 @@
 				C28A19DB1B89B6FC00762A27 /* venuViewController.swift in Sources */,
 				C28A19D51B89940400762A27 /* IBeacon.swift in Sources */,
 				C28A19D91B89B6FC00762A27 /* saticContVenuViewController.swift in Sources */,
+				C26A26B81B8A116100C6F3A9 /* nearbyViewController.swift in Sources */,
 				C28A19DA1B89B6FC00762A27 /* venuTableViewCell.swift in Sources */,
 				C28A19FF1B89D12000762A27 /* wooUITableViewCell.swift in Sources */,
 			);

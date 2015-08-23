@@ -11,6 +11,9 @@ import QuartzCore
 
 class saticContVenuViewController: UIViewController {
 
+  @IBOutlet weak var venueDescript: UITextView!
+  @IBOutlet weak var venueCat: UILabel!
+  @IBOutlet weak var venueImgv: UIImageView!
     @IBOutlet weak var price: UILabel!
   @IBOutlet weak var lblTitle: UILabel!
    

@@ -1,31 +1,31 @@
 //
-//  ViewController.swift
-//  magicPay
+//  nearbyViewController.swift
+//  Magicpass
 //
-//  Created by Lucas Farah on 8/22/15.
-//  Copyright (c) 2015 Lucas Farah. All rights reserved.
+//  Created by Noah Marriott on 8/23/15.
+//  Copyright (c) 2015 Noah Marriott. All rights reserved.
 //
 
 import UIKit
-import DigitsKit
 import CoreLocation
 import Firebase
-import MapKit
-class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardViewControllerDelegate {
+class nearbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,CLLocationManagerDelegate,SIMChargeCardViewControllerDelegate {
+
+    @IBOutlet weak var tbVIew: UITableView!
   
-  @IBOutlet weak var map: MKMapView!
-  @IBOutlet var imgvQr:UIImageView? = UIImageView()
+//    var logo = ["masters-of-code1.jpg","Logo_Tomorrowland.png","logo.png","Logo"]
+//    var theName = ["Mastercard Masters of Code", "California's Great America"]
+    var cat = ["Events", "Theme Parks","",""]
+    var location = ["San Fransisco, CA", "Santa Clara, CA","San Fransisco, CA","San Fransisco, CA"]
+  var logo = ["masters-of-code1.jpg","Logo_Tomorrowland.png","logo.png","Logo"]
   
+  var theName = ["Mastercard Masters of Code","Tomorrowland","Jurassic World @ AMC Metreon 16","California's Great America"]
+  
+  var mi = ["0","3.5","5.3","50"]
+
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
   var locationManager:CLLocationManager = CLLocationManager()
   
-  @IBOutlet weak var tbView: UITableView!
-  
-  var logo = ["masters-of-code1.jpg","Logo_Tomorrowland.png","Logo","logo.png"]
-  
-  var name = ["Mastercard Masters of Code","Tomorrowland","Jurassic World @ AMC Metreon 16","California's Great America"]
-  
-  var mi = ["0","3.5","5.3","50"]
   
   func start() {
     locationManager = CLLocationManager()
@@ -45,6 +45,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
     self.locationManager.startRangingBeaconsInRegion(self.myBeaconRegion)
     
   }
+
   
   func creditCardTokenFailedWithError(error: NSError!) {
     println(error)
@@ -96,74 +97,57 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
     }
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    self.start()
-    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
-    {
-      self.imgvQr?.image = UIImage(data: NSData(contentsOfURL: NSURL(string:"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GreatAmerica%20-\(userID)")!)!)!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      self.start()
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    // Do any additional setup after loading the view, typically from a nib.
-    //2. Create a SIMChargeViewController with your public api key
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return theName.count
+    }
     
-    //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tbVIew.dequeueReusableCellWithIdentifier("theCell") as! nearbyTableViewCell
+        
+        var logoImg = UIImage(named: logo[indexPath.row])
+      
+        cell.logo.image = logoImg
+        cell.Name.text = theName[indexPath.row]
+        cell.cat.text = cat[indexPath.row]
+        cell.city.text = location[indexPath.row]
+        return cell
+    }
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    if indexPath.row == 0
+    {
+      NSUserDefaults.standardUserDefaults().setObject("Mastercard Masters of Code", forKey: "title")
+    }
+    else if indexPath.row == 1
+    {
+      NSUserDefaults.standardUserDefaults().setObject("Tomorrowland", forKey: "title")
+      
+    }
+    else if indexPath.row == 2
+    {
+      NSUserDefaults.standardUserDefaults().setObject("Jurassic World @ AMC", forKey: "title")
+      
+    }
+    else if indexPath.row == 3
+    {
+      NSUserDefaults.standardUserDefaults().setObject("California's Great America", forKey: "title")
+    }
     
-    //4. Add SIMChargeViewController to your view hierarchy
-    
-    //    let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
-    //      (session: DGTSession!, error: NSError!) in
-    //      // play with Digits session
-    //      println("phone number: \(session.phoneNumber)")
-    //      println("User id: \(session.userID)")
-    //
-    //      //Saving on NSUserDefaults
-    //      NSUserDefaults.standardUserDefaults().setValue(session.phoneNumber, forKey: "phoneNumber")
-    //      NSUserDefaults.standardUserDefaults().setValue(session.userID, forKey: "userID")
-    //      NSUserDefaults.standardUserDefaults().synchronize()
-    //
-    //
-    //      var myRootRef = Firebase(url:"https://magicpay.firebaseio.com")
-    //      // Write data to Firebase
-    //      var alanisawesome = ["full_name": "Alan Turing", "userID": session.userID]
-    //
-    //      var usersRef = myRootRef.childByAppendingPath("users")
-    //
-    //      var users = [session.userID: alanisawesome]
-    //      usersRef.setValue(users)
-    //
-    //
-    //      // Write data to Firebase
-    //      var venue = ["full_name": "Great America", "venueID": "GreatAmerica","venuePrice":30]
-    //
-    //      var venuesRef = myRootRef.childByAppendingPath("venues")
-    //
-    //      var venues = ["GreatAmerica": venue]
-    //      venuesRef.setValue(venues)
-    //
-    ////      var ref = Firebase(url: "https://magicpay.firebaseio.com")
-    ////      var alanisawesome = ["full_name": "Alan Turing", "date_of_birth": "June 23, 1912"]
-    ////      var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
-    ////
-    ////      var usersRef = ref.childByAppendingPath("users")
-    ////
-    ////      var users = ["alanisawesome": alanisawesome, "gracehop": gracehop]
-    ////      usersRef.setValue(users)
-    //
-    //    })
-    //    authenticateButton.center = self.view.center
-    //    self.view.addSubview(authenticateButton)
-    
-    //    let bc = IBeacon()
-    // Create a NSUUID with the same UUID as the broadcasting beacon
-    //    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"A77A1B68-49A7-4DBF-914C-760D07FBB87B"];
-    
-    // Setup a new region with that UUID and same identifier as the broadcasting beacon
-    
-    // Tell location manager to start monitoring for the beacon region
+    self.performSegueWithIdentifier("detail", sender: self)
   }
-  //MARK: Delegate
+  
   func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
     println("Failed")
   }
@@ -245,8 +229,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
       println(snapshot.value)
       }, withCancelBlock: { error in
         println(error.description)
-    })
-  }
+    })  }
   
   func chargeUserWithToken(#token: String,amount: Int,description: String)
   {
@@ -278,6 +261,17 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
   func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
     println("Exited Beacon")
   }
-  
-}
 
+
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
