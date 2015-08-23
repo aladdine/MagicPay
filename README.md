@@ -1,2 +1,0 @@
-# MagicPay
-Location based payment
