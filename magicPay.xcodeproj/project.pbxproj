@@ -13,6 +13,11 @@
 		C28A19A81B8966F500762A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A71B8966F500762A27 /* Images.xcassets */; };
 		C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A91B8966F500762A27 /* LaunchScreen.xib */; };
 		C28A19B71B8966F500762A27 /* magicPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19B61B8966F500762A27 /* magicPayTests.swift */; };
+		C28A19C51B89672900762A27 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C11B89672900762A27 /* Fabric.framework */; };
+		C28A19C61B89672900762A27 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C21B89672900762A27 /* DigitsKit.framework */; };
+		C28A19C71B89672900762A27 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C28A19C31B89672900762A27 /* DigitsKitResources.bundle */; };
+		C28A19C81B89672900762A27 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C41B89672900762A27 /* TwitterCore.framework */; };
+		C28A19CA1B896BC500762A27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C91B896BC500762A27 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		C28A19B01B8966F500762A27 /* magicPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magicPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A19B51B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A19B61B8966F500762A27 /* magicPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magicPayTests.swift; sourceTree = "<group>"; };
+		C28A19C11B89672900762A27 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		C28A19C21B89672900762A27 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = "<group>"; };
+		C28A19C31B89672900762A27 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
+		C28A19C41B89672900762A27 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		C28A19C91B896BC500762A27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28A19CA1B896BC500762A27 /* CoreLocation.framework in Frameworks */,
+				C28A19C51B89672900762A27 /* Fabric.framework in Frameworks */,
+				C28A19C81B89672900762A27 /* TwitterCore.framework in Frameworks */,
+				C28A19C61B89672900762A27 /* DigitsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +73,11 @@
 		C28A19921B8966F500762A27 = {
 			isa = PBXGroup;
 			children = (
+				C28A19C91B896BC500762A27 /* CoreLocation.framework */,
+				C28A19C11B89672900762A27 /* Fabric.framework */,
+				C28A19C21B89672900762A27 /* DigitsKit.framework */,
+				C28A19C31B89672900762A27 /* DigitsKitResources.bundle */,
+				C28A19C41B89672900762A27 /* TwitterCore.framework */,
 				C28A199D1B8966F500762A27 /* magicPay */,
 				C28A19B31B8966F500762A27 /* magicPayTests */,
 				C28A199C1B8966F500762A27 /* Products */,
@@ -122,6 +141,7 @@
 				C28A19971B8966F500762A27 /* Sources */,
 				C28A19981B8966F500762A27 /* Frameworks */,
 				C28A19991B8966F500762A27 /* Resources */,
+				C28A19C01B89671400762A27 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -156,11 +176,18 @@
 		C28A19931B8966F500762A27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Lucas Farah";
 				TargetAttributes = {
 					C28A199A1B8966F500762A27 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = BRY2B7NKP2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C28A19AF1B8966F500762A27 = {
 						CreatedOnToolsVersion = 6.4;
@@ -192,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28A19C71B89672900762A27 /* DigitsKitResources.bundle in Resources */,
 				C28A19A61B8966F500762A27 /* Main.storyboard in Resources */,
 				C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */,
 				C28A19A81B8966F500762A27 /* Images.xcassets in Resources */,
@@ -206,6 +234,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C28A19C01B89671400762A27 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 250c0961bd5f51015d6438b7745326cb35434b98 96d617321465a519f3a00ce55110292ce2a0719c73363b9640f38452c29735ad";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C28A19971B8966F500762A27 /* Sources */ = {
@@ -340,7 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = magicPay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -350,7 +400,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = magicPay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +465,7 @@
 				C28A19BC1B8966F500762A27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C28A19BD1B8966F500762A27 /* Build configuration list for PBXNativeTarget "magicPayTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +474,7 @@
 				C28A19BF1B8966F500762A27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
