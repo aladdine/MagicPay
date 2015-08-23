@@ -1,5 +1,4 @@
         <?php
-         
         require_once("simplifycommerce/lib/Simplify.php");
          
         Simplify::$publicKey = 'sbpb_ZDQ3ZjU3N2ItNWY5My00ZWU1LWI3NjUtMzNiMTQyMjc3NmVm';
