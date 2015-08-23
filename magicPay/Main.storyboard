@@ -204,6 +204,9 @@
                     <navigationItem key="navigationItem" title="Profile" id="qt5-4j-g6i">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="JR2-sU-fJN">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="butLogout:" destination="NUX-Cd-htt" id="2fD-BQ-kIg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

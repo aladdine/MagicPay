@@ -22,6 +22,7 @@ class nearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
   var theName = ["Mastercard Masters of Code","Tomorrowland","Jurassic World @ AMC Metreon 16","California's Great America"]
   
   var mi = ["0","3.5","5.3","50"]
+  var lastProximity: CLProximity! = CLProximity.Unknown
 
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
   var locationManager:CLLocationManager = CLLocationManager()
@@ -163,6 +164,13 @@ class nearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     if (beacons.first != nil)
     {
       let nearestBeacon = beacons.first as! CLBeacon
+      if (beacons.first != nil)
+      {
+        let nearestBeacon = beacons.first as! CLBeacon
+        if(nearestBeacon.proximity == lastProximity! ||                     nearestBeacon.proximity == CLProximity.Unknown) {
+          return;
+        }
+        lastProximity = nearestBeacon.proximity;
       var message = ""
       
       switch nearestBeacon.proximity {
@@ -178,6 +186,8 @@ class nearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
       }
       //      println(message)
     }
+  }
+    
   }
   
   func beaconDidApprox(#beacon:CLBeacon, forRegion region: CLRegion)
@@ -208,16 +218,20 @@ class nearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
           let dic = snapshot.value as! NSDictionary
           let token = dic["token"] as! String
           
-          var not = UIAlertController(title: "Proximation detected", message: "Do you want to pay $\(price/100) for \(venueName)?", preferredStyle: UIAlertControllerStyle.Alert)
-          let yes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            self.chargeUserWithToken(token: token, amount: price, description: venueID)
+           if UIApplication.sharedApplication().applicationState.rawValue != 2
+           {
+            var not = UIAlertController(title: "Proximation detected", message: "Do you want to pay $\(price/100) for \(venueName)?", preferredStyle: UIAlertControllerStyle.Alert)
+            let yes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+              self.chargeUserWithToken(token: token, amount: price, description: venueID)
+              
+            })
+            let no = UIAlertAction(title: "No", style: UIAlertActionStyle.Destructive, handler: nil)
+            not.addAction(yes)
+            not.addAction(no)
+            self.presentViewController(not, animated: true, completion: nil)
             
-          })
-          let no = UIAlertAction(title: "No", style: UIAlertActionStyle.Destructive, handler: nil)
-          not.addAction(yes)
-          not.addAction(no)
-          self.presentViewController(not, animated: true, completion: nil)
-          
+          }
+
           //        self.chargeUserWithToken(token: token, amount: price, description: venueID)
           
           println(snapshot.value)

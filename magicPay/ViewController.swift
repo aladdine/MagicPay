@@ -17,8 +17,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
   @IBOutlet var imgvQr:UIImageView? = UIImageView()
   
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
-  var locationManager:CLLocationManager = CLLocationManager()
   
+  var locationManager:CLLocationManager = CLLocationManager()
+
   @IBOutlet weak var tbView: UITableView!
   
   var logo = ["masters-of-code1.jpg","Logo_Tomorrowland.png","Logo","logo.png"]
@@ -35,10 +36,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
     locationManager.startUpdatingLocation()
     
     
+    //    let uuid = NSUUID(UUIDString: "BF9407F30-F5F8-466E-AFF9-25556B57FE6D")
     let uuid = NSUUID(UUIDString: "3E6857AF-11C7-44AD-837D-F3766E80520B")
-    let uuid2 = NSUUID(UUIDString: "52414449-5553-4E45-5457-4F234B53434F")
     
     self.myBeaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: "GreatAmerica")
+    //    self.myBeaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 25080, minor: 30768, identifier: "GreatAmerica")
     
     //    self.locationManager.startMonitoringForRegion(self.myBeaconRegion)
     
@@ -179,6 +181,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
     if (beacons.first != nil)
     {
       let nearestBeacon = beacons.first as! CLBeacon
+//      if(nearestBeacon.proximity == lastProximity ||                     nearestBeacon.proximity == CLProximity.Unknown) {
+//        return;
+//      }
+//      lastProximity = nearestBeacon.proximity;
       var message = ""
       
       switch nearestBeacon.proximity {
@@ -198,6 +204,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
   
   func beaconDidApprox(#beacon:CLBeacon, forRegion region: CLRegion)
   {
+    
     println("beaconID: \(region.identifier)")
     if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
     {

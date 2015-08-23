@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import DigitsKit
 class MeViewController: UIViewController {
 
   @IBOutlet weak var map: MKMapView!
@@ -17,7 +18,12 @@ class MeViewController: UIViewController {
   func centerMapOnLocation(location: CLLocation) {
     let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
       regionRadius * 2.0, regionRadius * 2.0)
+   
     map.setRegion(coordinateRegion, animated: true)
+  }
+  @IBAction func butLogout(sender: AnyObject) {
+    let dg = Digits.sharedInstance()
+    dg.logOut()
   }
     override func viewDidLoad() {
         super.viewDidLoad()
