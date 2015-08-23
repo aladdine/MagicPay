@@ -50,7 +50,8 @@ class wooViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         return cell
     }
-    /*
+  
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -58,6 +59,6 @@ class wooViewController: UIViewController, UITableViewDataSource, UITableViewDel
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

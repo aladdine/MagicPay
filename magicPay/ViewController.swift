@@ -12,9 +12,18 @@ import CoreLocation
 import Firebase
 class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardViewControllerDelegate {
   
+  @IBOutlet var imgvQr:UIImageView? = UIImageView()
+
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
   var locationManager:CLLocationManager = CLLocationManager()
+  @IBOutlet weak var tbView: UITableView!
   
+  var logo = ["masters-of-code1.jpg","Logo_Tomorrowland.png","Logo","logo.png"]
+  
+  var name = ["Mastercard Masters of Code","Tomorrowland","Jurassic World @ AMC Metreon 16","California's Great America"]
+  
+  var mi = ["0","3.5","5.3","50"]
+
   func start() {
     locationManager = CLLocationManager()
     locationManager.delegate = self
@@ -88,7 +97,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardVi
     super.viewDidLoad()
     
     self.start()
-
+    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
+    {
+      self.imgvQr?.image = UIImage(data: NSData(contentsOfURL: NSURL(string:"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GreatAmerica%20-\(userID)")!)!)!
+    }
+    
     // Do any additional setup after loading the view, typically from a nib.
     //2. Create a SIMChargeViewController with your public api key
     

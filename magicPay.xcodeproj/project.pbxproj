@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */; };
+		C26A26B41B89FDE300C6F3A9 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A26B31B89FDE300C6F3A9 /* EventDetailViewController.swift */; };
 		C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A01B8966F500762A27 /* AppDelegate.swift */; };
 		C28A19A31B8966F500762A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A19A21B8966F500762A27 /* ViewController.swift */; };
 		C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28A19A91B8966F500762A27 /* LaunchScreen.xib */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		5C14C7CC3C28F394BF429F91 /* libPods-magicPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magicPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.debug.xcconfig"; sourceTree = "<group>"; };
+		C26A26B31B89FDE300C6F3A9 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		C28A199B1B8966F500762A27 /* magicPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magicPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A199F1B8966F500762A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A19A01B8966F500762A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				C28A19A21B8966F500762A27 /* ViewController.swift */,
 				C28A19DE1B89B77800762A27 /* Images.xcassets */,
 				C28A19DC1B89B72100762A27 /* Main.storyboard */,
+				C26A26B31B89FDE300C6F3A9 /* EventDetailViewController.swift */,
 				C28A19F31B89C28400762A27 /* MeViewController.swift */,
 				C28A19E21B89B85800762A27 /* LoginViewController.swift */,
 				C28A19F71B89C52C00762A27 /* 320px-MasterCard_logo.png */,
@@ -419,6 +422,7 @@
 				C28A19E31B89B85800762A27 /* LoginViewController.swift in Sources */,
 				C28A19FE1B89D12000762A27 /* blahUIViewController.swift in Sources */,
 				C28A19FD1B89D12000762A27 /* blahTableViewCell.swift in Sources */,
+				C26A26B41B89FDE300C6F3A9 /* EventDetailViewController.swift in Sources */,
 				C28A19A31B8966F500762A27 /* ViewController.swift in Sources */,
 				C28A19F41B89C28400762A27 /* MeViewController.swift in Sources */,
 				C28A19A11B8966F500762A27 /* AppDelegate.swift in Sources */,

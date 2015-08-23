@@ -12,12 +12,20 @@ import QuartzCore
 class saticContVenuViewController: UIViewController {
 
     @IBOutlet weak var price: UILabel!
+  @IBOutlet weak var lblTitle: UILabel!
    
     override func viewDidLoad() {
         super.viewDidLoad()
         price.layer.cornerRadius = 5.0
         price.clipsToBounds = true
         // Do any additional setup after loading the view.
+      
+      let title = NSUserDefaults.standardUserDefaults().stringForKey("title")
+      self.lblTitle.text = title
+      
+      self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//      self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+
     }
 
     override func didReceiveMemoryWarning() {
