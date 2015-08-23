@@ -19,6 +19,8 @@
 		C28A19C71B89672900762A27 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C28A19C31B89672900762A27 /* DigitsKitResources.bundle */; };
 		C28A19C81B89672900762A27 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C41B89672900762A27 /* TwitterCore.framework */; };
 		C28A19CA1B896BC500762A27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19C91B896BC500762A27 /* CoreLocation.framework */; };
+		C28A19CD1B898A8100762A27 /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C28A19CB1B898A8100762A27 /* Simplify.bundle */; };
+		C28A19CE1B898A8100762A27 /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A19CC1B898A8100762A27 /* Simplify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		C28A19C31B89672900762A27 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
 		C28A19C41B89672900762A27 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		C28A19C91B896BC500762A27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C28A19CB1B898A8100762A27 /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
+		C28A19CC1B898A8100762A27 /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
+		C28A19D01B898AFC00762A27 /* magicPay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "magicPay-Bridging-Header.h"; sourceTree = "<group>"; };
 		F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-magicPay/Pods-magicPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +65,7 @@
 				C28A19CA1B896BC500762A27 /* CoreLocation.framework in Frameworks */,
 				C28A19C51B89672900762A27 /* Fabric.framework in Frameworks */,
 				C28A19C81B89672900762A27 /* TwitterCore.framework in Frameworks */,
+				C28A19CE1B898A8100762A27 /* Simplify.framework in Frameworks */,
 				C28A19C61B89672900762A27 /* DigitsKit.framework in Frameworks */,
 				82D9FA5A74F2BBDD247CAAB8 /* libPods-magicPay.a in Frameworks */,
 			);
@@ -86,6 +92,8 @@
 		C28A19921B8966F500762A27 = {
 			isa = PBXGroup;
 			children = (
+				C28A19CB1B898A8100762A27 /* Simplify.bundle */,
+				C28A19CC1B898A8100762A27 /* Simplify.framework */,
 				C28A19C91B896BC500762A27 /* CoreLocation.framework */,
 				C28A19C11B89672900762A27 /* Fabric.framework */,
 				C28A19C21B89672900762A27 /* DigitsKit.framework */,
@@ -96,6 +104,7 @@
 				C28A199C1B8966F500762A27 /* Products */,
 				D0CB42A0E730D080F97F7B3C /* Pods */,
 				9806E120A7A495A23983BEA1 /* Frameworks */,
+				C28A19D01B898AFC00762A27 /* magicPay-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +258,7 @@
 				C28A19A61B8966F500762A27 /* Main.storyboard in Resources */,
 				C28A19AB1B8966F500762A27 /* LaunchScreen.xib in Resources */,
 				C28A19A81B8966F500762A27 /* Images.xcassets in Resources */,
+				C28A19CD1B898A8100762A27 /* Simplify.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +451,7 @@
 			baseConfigurationReference = A2A846451CCCA1A92B7C619A /* Pods-magicPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +461,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "magicPay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -458,6 +471,7 @@
 			baseConfigurationReference = F68E5DAA4A4612DDD4A49F6C /* Pods-magicPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,6 +481,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "magicPay-Bridging-Header.h";
 			};
 			name = Release;
 		};

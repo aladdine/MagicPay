@@ -10,7 +10,7 @@ import UIKit
 import DigitsKit
 import CoreLocation
 import Firebase
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController,CLLocationManagerDelegate,SIMChargeCardViewControllerDelegate {
   
   var myBeaconRegion:CLBeaconRegion = CLBeaconRegion()
   var locationManager:CLLocationManager = CLLocationManager()
@@ -35,9 +35,51 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
   }
   
+  func creditCardTokenFailedWithError(error: NSError!) {
+    println(error)
+  }
+  func creditCardTokenProcessed(token: SIMCreditCardToken!) {
+    println("Credit Card token: \(token.token)")
+    let token = token.token
+    self.saveTokenToFirebase(token)
+  }
+  
+  func saveTokenToFirebase(token: String)
+  {
+    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
+    {
+      var myRootRef = Firebase(url:"https://magicpay.firebaseio.com")
+      // Write data to Firebase
+      var alanisawesome = ["full_name": "Alan Turing", "userID": userID,"token":token]
+      
+      var usersRef = myRootRef.childByAppendingPath("users")
+      
+      var users = [userID as NSString!: alanisawesome]
+      usersRef.setValue(users)
+      
+    }
+   self.dismissViewControllerAnimated(true, completion: nil)
+  }
+  func chargeCardCancelled() {
+    println("cancelled")
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    var chargeVC = SIMChargeCardViewController(publicKey: "sbpb_ZDQ3ZjU3N2ItNWY5My00ZWU1LWI3NjUtMzNiMTQyMjc3NmVm")
+    chargeVC.delegate = self
+    self.presentViewController(chargeVC, animated: true, completion: nil)
+
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    //2. Create a SIMChargeViewController with your public api key
+    
+    //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
+    
+    //4. Add SIMChargeViewController to your view hierarchy
+    
     let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
       (session: DGTSession!, error: NSError!) in
       // play with Digits session
@@ -49,6 +91,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
       NSUserDefaults.standardUserDefaults().setValue(session.userID, forKey: "userID")
       NSUserDefaults.standardUserDefaults().synchronize()
       
+      
+      var myRootRef = Firebase(url:"https://magicpay.firebaseio.com")
+      // Write data to Firebase
+      var alanisawesome = ["full_name": "Alan Turing", "userID": session.userID]
+
+      var usersRef = myRootRef.childByAppendingPath("users")
+      
+      var users = [session.userID: alanisawesome]
+      usersRef.setValue(users)
 //      var ref = Firebase(url: "https://magicpay.firebaseio.com")
 //      var alanisawesome = ["full_name": "Alan Turing", "date_of_birth": "June 23, 1912"]
 //      var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
