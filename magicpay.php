@@ -8,7 +8,7 @@
         $payment = Simplify_Payment::createPayment(array(
                 'amount' => $_REQUEST['amount'],
                 'token' => $_REQUEST['token'],
-                'description' => 'payment description',
+                'description' => $_REQUEST['description'],
                 'reference' => '7a6ef6be31',
                 'currency' => 'USD'
         ));
