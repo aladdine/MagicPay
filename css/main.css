@@ -9,12 +9,69 @@
 	height: 500px;
 }
 
+.quote {
+	background-image: url('../img/party.jpeg');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.built-with {
+	text-align: center;
+}
+
+#coffeeshop {
+
+	background-image: url('../img/coffeeshop.png');
+
+}
+
+.simplify {
+	margin: auto;
+	margin-top: 40px;
+	text-align: center;
+	background-image: url('../img/simplify.png');
+	height: 200px;
+	max-height: 200px;
+	background-size: 220px 120px;
+	background-repeat: no-repeat;
+}
+
+.fabric {
+	margin: auto;
+	text-align: center;
+	background-image: url('../img/fabric.png');
+	height: 200px;
+	max-height: 200px;
+	background-size: 180px 160px;
+	background-repeat: no-repeat;
+}
+
+.ibeacon {
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+	background-image: url('../img/ibeacon.png');
+	height: 200px;
+	max-height: 200px;
+	background-size: 110px 130px;
+	background-repeat: no-repeat;
+}
+
+.howto {
+	text-align: center;
+}
+
 .slogan {
 	color: #FFF;
 }
 
 .appstore {
 	margin-top: 80px;
+}
+
+.pricing {
+	margin-bottom: 30px;
 }
 
 
