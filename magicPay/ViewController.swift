@@ -81,7 +81,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         message = "Proximity: Near"
       case CLProximity.Immediate:
         message = "Proximity: Immediate"
-        self.beaconDidApprox(beacon: nearestBeacon, forRegion: region)
+     //   self.beaconDidApprox(beacon: nearestBeacon, forRegion: region)
       case CLProximity.Unknown:
         return
       }
@@ -89,11 +89,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     }
   }
   
-  func beaconDidApprox(#beacon:CLBeacon, forRegion region: CLRegion)
-  {
-    println(region.identifier)
-    let session = DGTSession.userID
-  }
+  
   func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
     println("Exited Beacon")
   }
